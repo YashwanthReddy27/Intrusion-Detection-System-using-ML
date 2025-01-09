@@ -16,11 +16,11 @@ Six models have been implemented, namely
 The ROC-AUC curve is used to compare models. It illustrates the True Positive rates vs. False Positive rates for the model. The closer the area under the curve is to 1, the better the trained model is. The reference is a no-skill model that predicts only one class all the time and has an area under the curve of 0.5.
 
 ## Model Enhancement 
-The model has been enhanced using XGBoost; this model was chosen for its ability to handle large datasets and complex relationships. 
+XGBoost has been used to enhance the model. It was chosen because it can handle large datasets and complex relationships. 
 
 ## Data Handling
-Class imbalance is addressed using SMOTE(Synthetic Minority Oversampling Technique), which generates new data points to balance an imbalanced dataset and increase minority class samples. Instead of generating data points on the line segment connecting the two, SMOTE randomly selects a minority class point and one of its K-nearest neighbors to create a new data point.
-In this data handling process, we also used K-fold cross-validation for a better evaluation.
+Class imbalance is addressed using SMOTE(Synthetic Minority Oversampling Technique), which generates new data points to balance an imbalanced dataset and increase minority class samples. Instead of generating data points on the line segment connecting the two, SMOTE randomly selects a minority class point and one of its K-nearest neighbors to create a new data point. You can use this code before training other models.
+For model evaluation purposes, we also used K-fold cross-validation for a better evaluation.
 
 ## Deployment
 Built a pipeline for preprocessing and prediction and created a Flask Rest API for deployment.
